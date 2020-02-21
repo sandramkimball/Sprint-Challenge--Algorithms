@@ -3,15 +3,15 @@
 ## Exercise I
 # Give an analysis of the running time of each snippet of pseudocode with respect to the input size n
 
-a)
-O(1)
+a) 
+    O(1) - one action happening, one level of basic math. Fast.
 
 b)
-O(n)
+    O(n log n) - a for loop + while loop, which condences into a single n action. Medium speed range, but still good. 
 
 
 c)
-O{N^2}
+    O(n^2) - recursive. It's a simple action O(n), just being ran over and over. Slow. But can be improved using cache to an extent.
 
 ## Exercise II
 
