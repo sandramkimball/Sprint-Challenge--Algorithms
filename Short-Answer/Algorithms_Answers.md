@@ -23,7 +23,7 @@ The algorithm should sort the floors by level: ground floor (0), floor 1, floor 
 
 Then find floor f in the array of floor levels and set it as the breaking point. This requires searching through the list. The quickets way would be to
 
-Run time complex: O(n)
+Run time complex: binary search will be a hair faster, but I feel this would be a small enough scope to use linear search as well. 0(n)
 
 break_egg(floors, break_point):
     for floor in floors:
