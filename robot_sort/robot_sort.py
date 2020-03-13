@@ -10,25 +10,16 @@ class SortingRobot:
         self._time = 0          # A time counter (stretch)
 
     def can_move_right(self):
-        """
-        Returns True if the robot can move right or False if it's
-        at the end of the list.
-        """
         return self._position < len(self._list) - 1
 
     def can_move_left(self):
-        """
-        Returns True if the robot can move left or False if it's
-        at the start of the list.
-        """
         return self._position > 0
 
     def move_right(self):
-        """
-        If the robot can move to the right, it moves to the right and
-        returns True. Otherwise, it stays in place and returns False.
-        This will increment the time counter by 1.
-        """
+        # If the robot can move to the right, it moves to the right and
+        # returns True. Otherwise, it stays in place and returns False.
+        # This will increment the time counter by 1.
+        
         self._time += 1
         if self._position < len(self._list) - 1:
             self._position += 1
@@ -52,7 +43,7 @@ class SortingRobot:
     def swap_item(self):
         """
         The robot swaps its currently held item with the list item in front
-        of it.
+        of it.  
         This will increment the time counter by 1.
         """
         self._time += 1
@@ -93,11 +84,15 @@ class SortingRobot:
         return self._light == "ON"
 
     def sort(self):
-        """
-        Sort the robot's list.
-        """
-        # Fill this out
-        pass
+        l = self._list
+        for i in range(0, len(l)):
+            current = i
+            smallest = i
+            for j in range(i, len(l)):
+                if l[j] < l[smallest]:
+                    smallest = j
+            l[smallest], l[current] = l[current], l[smallest]
+        return l
 
 
 if __name__ == "__main__":

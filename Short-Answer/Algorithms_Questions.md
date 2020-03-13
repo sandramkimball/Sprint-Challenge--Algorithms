@@ -2,8 +2,7 @@
 
 ## Exercise I
 
-Give an analysis of the running time of each snippet of
-pseudocode with respect to the input size n of each of the following:
+Give an analysis of the running time of each snippet of pseudocode with respect to the input size n of each of the following:
 
 ```python
 a)  a = 0
